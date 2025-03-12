@@ -1,0 +1,5 @@
+{"level":"warn","message":"DeprecationWarning: The Parse Server option 'encodeParseObjectInCloudFunction' default will change to 'true' in a future version.","timestamp":"2025-03-06T13:24:40.556Z"}
+{"level":"info","message":"Parse LiveQuery Server started running","timestamp":"2025-03-06T13:24:40.642Z"}
+{"level":"warn","message":"DeprecationWarning: The Parse Server option 'encodeParseObjectInCloudFunction' default will change to 'true' in a future version.","timestamp":"2025-03-06T13:59:15.560Z"}
+{"level":"info","message":"Parse LiveQuery Server started running","timestamp":"2025-03-06T13:59:15.658Z"}
+{"functionName":"OnlineAgentByAgentCode","level":"info","message":"Ran cloud function OnlineAgentByAgentCode for user undefined with:\n  Input: {\"AgentCode\":\"1234\"}\n  Result: \"1\"","params":{"AgentCode":"1234"},"timestamp":"2025-03-06T13:59:17.407Z"}

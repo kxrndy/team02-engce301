@@ -1,0 +1,5 @@
+{"level":"warn","message":"DeprecationWarning: The Parse Server option 'encodeParseObjectInCloudFunction' default will change to 'true' in a future version.","timestamp":"2025-03-12T03:16:32.119Z"}
+{"level":"info","message":"Parse LiveQuery Server started running","timestamp":"2025-03-12T03:16:32.160Z"}
+{"level":"info","message":"Create new client: f21b5311-de6c-4803-a2a6-b8c34730665f","timestamp":"2025-03-12T03:17:44.667Z"}
+{"level":"info","message":"Client disconnect: f21b5311-de6c-4803-a2a6-b8c34730665f","timestamp":"2025-03-12T03:29:33.781Z"}
+{"level":"info","message":"Create new client: 842fe987-3d99-4550-9ddb-02a86b6909e0","timestamp":"2025-03-12T03:43:12.823Z"}
