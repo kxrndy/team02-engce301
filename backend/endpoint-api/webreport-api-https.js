@@ -147,30 +147,12 @@ const init = async () => {
 
   await server.register(AuthBearer);
 
-  server.ext("onPreResponse", (request, h) => {
-    const response = request.response;
-
-    // Check if the response is an error
-    if (response.isBoom) {
-      console.error(response);
-      const { output } = response;
-      return h
-        .response({
-          error: output.payload.message,
-        })
-        .code(output.statusCode);
-    }
-
-    return h.continue;
-  });
-
   server.auth.strategy("simple", "bearer-access-token", {
     allowQueryToken: true, // optional, false by default
-    unauthorized: () => unauthorized("Invalid Auth key."),
     validate: async (request, token, h) => {
       // here is where you validate your token
       // comparing with token from your database for example
-      const isValid = token === apiConfig.serverKey;
+      const isValid = token === apiconfig.serverKey;
 
       const credentials = { token };
       const artifacts = { test: "info" };
