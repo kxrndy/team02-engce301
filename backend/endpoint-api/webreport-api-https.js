@@ -152,7 +152,7 @@ const init = async () => {
     validate: async (request, token, h) => {
       // here is where you validate your token
       // comparing with token from your database for example
-      const isValid = token === apiconfig.serverKey;
+      const isValid = token === apiConfig.serverKey;
 
       const credentials = { token };
       const artifacts = { test: "info" };
