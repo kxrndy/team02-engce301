@@ -177,3 +177,80 @@ Parse.Cloud.define("postOnlineAgentListByTeam", async (request) => {
     }
   }
 });
+
+Parse.Cloud.define("getUserLoginHistories", async (req) => {
+  let page = req.params.page || 0;
+  let size = req.params.size || 20;
+  if (page < 0) page = 0;
+  if (size >= 100) size = 100;
+
+  // Get content
+  const query = new Parse.Query("UserLoginHistories");
+  query.addDescending("createdAt");
+  query.skip(size * page);
+  query.limit(size);
+  const results = await query.find();
+
+  // Count total
+  const totalQuery = new Parse.Query("UserLoginHistories");
+  const total = await totalQuery.count();
+
+  return {
+    data: results,
+    pagination: {
+      currentPage: +page,
+      totalPage: Math.ceil(total / size),
+    },
+  };
+});
+
+Parse.Cloud.define("getAgentStatusHistories", async (req) => {
+  let page = req.params.page || 0;
+  let size = req.params.size || 20;
+  if (page < 0) page = 0;
+  if (size >= 100) size = 100;
+
+  // Get content
+  const query = new Parse.Query("AgentStatusHistories");
+  query.addDescending("createdAt");
+  query.skip(size * page);
+  query.limit(size);
+  const results = await query.find();
+
+  // Count total
+  const totalQuery = new Parse.Query("AgentStatusHistories");
+  const total = await totalQuery.count();
+
+  return {
+    data: results,
+    pagination: {
+      currentPage: +page,
+      totalPage: Math.ceil(total / size),
+    },
+  };
+});
+Parse.Cloud.define("getAgentMessageHistories", async (req) => {
+  let page = req.params.page || 0;
+  let size = req.params.size || 20;
+  if (page < 0) page = 0;
+  if (size >= 100) size = 100;
+
+  // Get content
+  const query = new Parse.Query("AgentMessageHistories");
+  query.addDescending("createdAt");
+  query.skip(size * page);
+  query.limit(size);
+  const results = await query.find();
+
+  // Count total
+  const totalQuery = new Parse.Query("AgentMessageHistories");
+  const total = await totalQuery.count();
+
+  return {
+    data: results,
+    pagination: {
+      currentPage: +page,
+      totalPage: Math.ceil(total / size),
+    },
+  };
+});

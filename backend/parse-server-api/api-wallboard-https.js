@@ -5,12 +5,13 @@ const cron = require("node-cron");
 const mongoose = require("mongoose");
 var cors = require("cors");
 var fs = require("fs");
+const { parseConfig } = require("./config");
 
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
 const databaseUri = process.env.DATABASE_URI || process.env.MONGODB_URI;
 
-var apiport = 4000;
+var apiport = 5002;
 
 var options = {
   key: fs.readFileSync("server.key"),
@@ -18,24 +19,18 @@ var options = {
 };
 
 const config = {
-  databaseURI: 'mongodb://wallboarduser:WB1qazxsw2@192.168.17.136:27017/wallboarddb',
-  cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
-  appId: process.env.APP_ID || 'wallboardapi',
-  masterKey: process.env.MASTER_KEY || 'wallboardapi', //Add your master key here. Keep it secret!
-  clientKey: 'wallboardapi',
-  javascriptKey: 'wallboardapi',
-  serverURL: 'https://172.17.207.171:' + apiport + '/api', // Don't forget to change to https if needed
-  publicServerURL: 'https://172.17.207.171:' + apiport + '/api',
+  ...parseConfig,
+  cloud: process.env.CLOUD_CODE_MAIN || __dirname + "/cloud/main.js",
   liveQuery: {
-    classNames: ["OnlineAgentLists", "WallboardBanners", "CallAgentSummaries"], // List of classes to support for query subscriptions
+    classNames: [
+      "OnlineAgentLists",
+      "AgentMessageHistories",
+      "AgentStatusHistories",
+      "UserLoginHistories",
+    ], // List of classes to support for query subscriptions
   },
-
-  masterKeyIps: ["0.0.0.0/0", "::/0"],
-  useMasterKey: true,
-  allowClientClassCreation: false,
-  allowExpiredAuthDataToken: false,
-  // encodeParseObjectInCloudFunction: false
 };
+console.log(`Parse config: `, config);
 
 const app = express();
 
