@@ -496,7 +496,7 @@ const init = async () => {
         });
 
       const AgentCode = user;
-      const { IsLogin, AgentStatus } = request.payload;
+      const { AgentName, IsLogin, AgentStatus } = request.payload;
       var d = new Date();
 
       try {
