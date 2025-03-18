@@ -162,7 +162,7 @@ export const CallStatusContainer = styled.div`
 `
 
 export const CenterBarStyle = styled.div`
-  background-color: #ffffff;
+  background-color: #e5e5e5;
   padding: 20px;
   display: flex;
   margin-top: 30px;

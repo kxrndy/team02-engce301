@@ -16,14 +16,14 @@ const Agentonline = ({ OnlineAgentList, ServiceCode }) => {
     <div>
       <Container className="mt-3">
         <Row>
-          <Col md={3}>
-            <table className="table table-sm border shadow-sm bg-light">
+          <Col sm={6} xl={4} xxl={3}>
+            <table className="table table-sm border shadow-sm bg-light rounded-3 overflow-hidden">
               <thead>
                 <tr>
                   <th
                     colSpan="2"
-                    className="bg-success text-light text-center"
-                    style={{ fontSize: '1.5rem', fontWeight: 'bold' }}
+                    className="bg-success text-light text-center py-2"
+                    style={{ fontWeight: 'bold' }}
                   >
                     Available Agent
                   </th>
@@ -58,14 +58,14 @@ const Agentonline = ({ OnlineAgentList, ServiceCode }) => {
               </tbody>
             </table>
           </Col>
-          <Col md={3}>
-            <table className="table table-sm border shadow-sm bg-light">
+          <Col sm={6} xl={4} xxl={3}>
+            <table className="table table-sm border shadow-sm bg-light rounded-3 overflow-hidden">
               <thead>
                 <tr>
                   <th
                     colSpan="2"
-                    className="bg-info text-light text-center"
-                    style={{ fontSize: '1.5rem', fontWeight: 'bold' }}
+                    className="bg-info text-light text-center py-2"
+                    style={{ fontWeight: 'bold' }}
                   >
                     Active Agent
                   </th>
@@ -100,14 +100,14 @@ const Agentonline = ({ OnlineAgentList, ServiceCode }) => {
               </tbody>
             </table>
           </Col>
-          <Col md={3}>
-            <table className="table table-sm border shadow-sm bg-light">
+          <Col sm={6} xl={4} xxl={3}>
+            <table className="table table-sm border shadow-sm bg-light rounded-3 overflow-hidden">
               <thead>
                 <tr>
                   <th
                     colSpan="2"
-                    className="bg-warning text-center"
-                    style={{ fontSize: '1.5rem', fontWeight: 'bold' }}
+                    className="bg-warning text-center py-2"
+                    style={{ fontWeight: 'bold' }}
                   >
                     Wrap Agent
                   </th>
@@ -142,14 +142,14 @@ const Agentonline = ({ OnlineAgentList, ServiceCode }) => {
               </tbody>
             </table>
           </Col>
-          <Col md={3}>
-            <table className="table table-sm border shadow-sm bg-light">
+          <Col sm={6} xl={4} xxl={3}>
+            <table className="table table-sm border shadow-sm bg-light rounded-3 overflow-hidden">
               <thead>
                 <tr>
                   <th
                     colSpan="2"
-                    className="bg-danger text-light text-center"
-                    style={{ fontSize: '1.5rem', fontWeight: 'bold' }}
+                    className="bg-danger text-light text-center py-2"
+                    style={{ fontWeight: 'bold' }}
                   >
                     Not Ready Agent
                   </th>
