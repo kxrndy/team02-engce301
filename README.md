@@ -8,6 +8,59 @@
 มหาวิทยาลัยเทคโนโลยีราชมงคลล้านนา เชียงใหม่  
 ภาคการศึกษาที่ 2 ปีการศึกษา 2567  
 
+##  **API Specification**
+# API Documentation
+- Endpoint API
+  - [/api/v1/login](./endpoint-api/login.md)
+  - [/api/v1/logout](./endpoint-api/logout.md)
+  - [/api/v1/postOnlineAgentStatus](./endpoint-api/postOnlineAgentStatus.md)
+  - [/api/v1/postSendMessage](./endpoint-api/postSendMessage.md)
+
+- Parse server
+  - [/hello](./parse-server/hello.md)
+  - [/OnlineAgentByAgentCode](./parse-server/OnlineAgentByAgentCode.md)
+  - [/postOnlineAgentListByTeam](./parse-server/postOnlineAgentListByTeam.md)
+  - [/getUserLoginHistories](./parse-server/getUserLoginHistories.md)
+  - [/getAgentStatusHistories](./parse-server/getAgentStatusHistories.md)
+  - [/getAgentMessageHistories](./parse-server/getAgentMessageHistories.md)
+
+## Test Case Overview
+รอต่อไป~
+
+## Data Flow Diagrams
+<p align="center">
+    <br>
+    <img src="https://imgur.com/a/QtyP4JI" alt="DFD">
+    <br>
+<p>
+
+## **Activity Flow Diagram**
+```mermaid
+stateDiagram
+    flowchart LR
+    A["Start"] ---> B("PC (Agent)") & C("PC (Agent)")
+    B ---> D("Agent-Notification")
+    C ---> E("Agent-Notification")
+    D ---> n1["Send / Recieve Message"] 
+    E ---> n2["Login / Logoutget Agent / UpdateAgent"]
+    n1 ---> F["Endpoint-api"]
+    n2 ---> F
+    F ---> G["MS SQL"]
+    G ---> F
+
+    A1["PC (Master)"] ---> B2["Wallboard-fe"]
+    B2 ---> C2["Parse-Server"]
+    C2 ---> B2
+    C2 ---> n3["UpdateAgentstatus"]
+    n3 ---> F 
+    C2 ---> D2["MOngoDB"]
+    D2 ---> C2
+
+    n1@{ shape: text}
+    n2@{ shape: text}
+    n3@{ shape: text}
+```
+
 ## 👨🏻‍💻 **Members**
 
 | 👤 **ชื่อ - นามสกุล**            | 🎓 **รหัสนักศึกษา** |
