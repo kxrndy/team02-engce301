@@ -9,7 +9,6 @@
 ภาคการศึกษาที่ 2 ปีการศึกษา 2567  
 
 ##  **API Specification**
-# API Documentation
 - Endpoint API
   - [/api/v1/login](./endpoint-api/login.md)
   - [/api/v1/logout](./endpoint-api/logout.md)
