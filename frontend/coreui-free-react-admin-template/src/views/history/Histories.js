@@ -2,7 +2,6 @@
 /* eslint-disable react/react-in-jsx-scope */
 import { Component } from 'react'
 import { Container } from './style.js'
-import { Row, Col } from 'react-bootstrap'
 import {
   CCard,
   CCardBody,
@@ -11,13 +10,18 @@ import {
   CRow,
   CTable,
   CTableBody,
-  CTableCaption,
   CTableDataCell,
   CTableHead,
   CTableHeaderCell,
   CTableRow,
 } from '@coreui/react'
-import { DocsExample } from 'src/components'
+
+import AccessTimeIcon from '@mui/icons-material/AccessTime'
+import SupportAgentIcon from '@mui/icons-material/SupportAgent'
+import MessageIcon from '@mui/icons-material/Message';
+import ExitToAppIcon from '@mui/icons-material/ExitToApp';
+import ChangeCircleIcon from '@mui/icons-material/ChangeCircle';
+
 import Parse from '../../parse-init.js'
 
 export default class Histories extends Component {
@@ -167,26 +171,32 @@ export default class Histories extends Component {
                   <strong>Agent login</strong>
                 </CCardHeader>
                 <CCardBody>
-                  <CTable hover>
+                  <CTable hover responsive className="mb-0 border">
                     <CTableHead>
                       <CTableRow>
-                        <CTableHeaderCell scope="col">Date</CTableHeaderCell>
-                        <CTableHeaderCell scope="col">Agent Code</CTableHeaderCell>
-                        <CTableHeaderCell scope="col">Action</CTableHeaderCell>
+                        <CTableHeaderCell scope="col" className="bg-body-tertiary text-nowrap">
+                          <AccessTimeIcon /> Date
+                        </CTableHeaderCell>
+                        <CTableHeaderCell scope="col" className="bg-body-tertiary text-nowrap">
+                          <SupportAgentIcon /> Agent Code
+                        </CTableHeaderCell>
+                        <CTableHeaderCell scope="col" className="bg-body-tertiary text-nowrap">
+                          <ExitToAppIcon /> Action
+                        </CTableHeaderCell>
                       </CTableRow>
                     </CTableHead>
                     <CTableBody>
                       {this.state.userLoginHistoriesData.map((i, key) => (
                         <CTableRow key={key}>
-                          <CTableDataCell scope="row">
+                          <CTableDataCell scope="row" className="text-nowrap">
                             {i.get('createdAt').toLocaleString()}
                           </CTableDataCell>
-                          <CTableDataCell>
+                          <CTableDataCell className="text-nowrap">
                             [{i.get('agent_code')}] {i.get('agent_name')}
                           </CTableDataCell>
-                          <CTableDataCell>
+                          <CTableDataCell className="text-nowrap">
                             <span
-                              className={`${i.get('is_login') === '1' ? 'bg-success' : 'bg-danger'} text-white px-2 py-1 rounded-4`}
+                              className={`${i.get('is_login') === '1' ? 'bg-success' : 'bg-danger'} text-white px-2 py-1 rounded-4`} style={{ fontSize: '8px' }}
                             >
                               {i.get('is_login') === '1' ? 'Login' : 'Logout'}
                             </span>
@@ -204,32 +214,40 @@ export default class Histories extends Component {
                   <strong>Agent status</strong>
                 </CCardHeader>
                 <CCardBody>
-                  <CTable hover>
+                  <CTable hover responsive className="mb-0 border">
                     <CTableHead>
                       <CTableRow>
-                        <CTableHeaderCell scope="col">Date</CTableHeaderCell>
-                        <CTableHeaderCell scope="col">Agent Code</CTableHeaderCell>
-                        <CTableHeaderCell scope="col">Status from</CTableHeaderCell>
-                        <CTableHeaderCell scope="col">Status to</CTableHeaderCell>
+                        <CTableHeaderCell scope="col" className="bg-body-tertiary text-nowrap">
+                          <AccessTimeIcon /> Date
+                        </CTableHeaderCell>
+                        <CTableHeaderCell scope="col" className="bg-body-tertiary text-nowrap">
+                          <SupportAgentIcon /> Agent Code
+                        </CTableHeaderCell>
+                        <CTableHeaderCell scope="col" className="bg-body-tertiary text-nowrap">
+                          <ChangeCircleIcon /> Status from
+                        </CTableHeaderCell>
+                        <CTableHeaderCell scope="col" className="bg-body-tertiary text-nowrap">
+                          <ChangeCircleIcon /> Status to
+                        </CTableHeaderCell>
                       </CTableRow>
                     </CTableHead>
                     <CTableBody>
                       {this.state.agentStatusHistoriesData.map((i, key) => (
                         <CTableRow key={key}>
-                          <CTableHeaderCell scope="row">
+                          <CTableHeaderCell scope="row" className="text-nowrap">
                             {i.get('createdAt').toLocaleString()}
                           </CTableHeaderCell>
-                          <CTableDataCell>{`[${i.get('agent_code')}] ${i.get('agent_name')}`}</CTableDataCell>
-                          <CTableDataCell>
+                          <CTableDataCell className="text-nowrap">{`[${i.get('agent_code')}] ${i.get('agent_name')}`}</CTableDataCell>
+                          <CTableDataCell className="text-nowrap">
                             <span
-                              className={`${this.transfromStateToTextColor(i.get('status_from'))} px-2 py-1 rounded-4 text-nowrap`}
+                              className={`${this.transfromStateToTextColor(i.get('status_from'))} px-2 py-1 rounded-4 text-nowrap`} style={{ fontSize: '8px' }}
                             >
                               {this.transfromStateToText(i.get('status_from'))}
                             </span>
                           </CTableDataCell>
-                          <CTableDataCell>
+                          <CTableDataCell className="text-nowrap">
                             <span
-                              className={`${this.transfromStateToTextColor(i.get('status_to'))} px-2 py-1 rounded-4 text-nowrap`}
+                              className={`${this.transfromStateToTextColor(i.get('status_to'))} px-2 py-1 rounded-4 text-nowrap`} style={{ fontSize: '8px' }}
                             >
                               {this.transfromStateToText(i.get('status_to'))}
                             </span>
@@ -247,24 +265,38 @@ export default class Histories extends Component {
                   <strong>Agent send message</strong>
                 </CCardHeader>
                 <CCardBody>
-                  <CTable hover>
+                  <CTable hover responsive className="mb-0 border">
                     <CTableHead>
                       <CTableRow>
-                        <CTableHeaderCell scope="col">Date</CTableHeaderCell>
-                        <CTableHeaderCell scope="col">Agent Code (From)</CTableHeaderCell>
-                        <CTableHeaderCell scope="col">Agent Code (To)</CTableHeaderCell>
-                        <CTableHeaderCell scope="col">Message</CTableHeaderCell>
+                        <CTableHeaderCell scope="col" className="bg-body-tertiary text-nowrap">
+                          <AccessTimeIcon /> Date
+                        </CTableHeaderCell>
+                        <CTableHeaderCell scope="col" className="bg-body-tertiary text-center">
+                          <SupportAgentIcon /> Agent Code (From)
+                        </CTableHeaderCell>
+                        <CTableHeaderCell scope="col" className="bg-body-tertiary text-center">
+                          <SupportAgentIcon /> Agent Code (To)
+                        </CTableHeaderCell>
+                        <CTableHeaderCell scope="col" className="bg-body-tertiary text-nowrap">
+                          <MessageIcon /> Message
+                        </CTableHeaderCell>
                       </CTableRow>
                     </CTableHead>
                     <CTableBody>
                       {this.state.agentMessageHistoriesData.map((i, key) => (
                         <CTableRow key={key}>
-                          <CTableDataCell scope="row">
+                          <CTableDataCell scope="row" className="text-nowrap">
                             {i.get('createdAt').toLocaleString()}
                           </CTableDataCell>
-                          <CTableDataCell>{i.get('from_agent_code')}</CTableDataCell>
-                          <CTableDataCell>{i.get('to_agent_code')}</CTableDataCell>
-                          <CTableDataCell>{i.get('message')}</CTableDataCell>
+                          <CTableDataCell className="text-nowrap text-center">
+                            {i.get('from_agent_code')}
+                          </CTableDataCell>
+                          <CTableDataCell className="text-nowrap text-center">
+                            {i.get('to_agent_code')}
+                          </CTableDataCell>
+                          <CTableDataCell className="text-nowrap">
+                            {i.get('message')}
+                          </CTableDataCell>
                         </CTableRow>
                       ))}
                     </CTableBody>
