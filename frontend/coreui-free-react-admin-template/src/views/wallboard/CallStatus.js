@@ -3,6 +3,7 @@ import { CallStatusContainer } from './style'
 import PhoneCallbackIcon from '@mui/icons-material/PhoneCallback'
 import PhoneMissedIcon from '@mui/icons-material/PhoneMissed'
 import RecordVoiceOverIcon from '@mui/icons-material/RecordVoiceOver'
+import HourglassBottomIcon from '@mui/icons-material/HourglassBottom';
 
 import {
   CRow,
@@ -114,6 +115,9 @@ const CallStatus = ({ OnlineAgentList, CallAgentSummaries, ServiceCode, CallQueu
             <>
               <div className="label text-dark"> Total Queue</div>
               <div className="counter d-flex gap-2 align-items-center text-dark">
+              <div className="icon opacity-25 position-absolute top-0 start-6 w-25">
+                  <HourglassBottomIcon className='' style={{ fontSize: '7rem' }} />
+                </div>
                 <div className="h1">{QueueCounter}</div>
               </div>
             </>
