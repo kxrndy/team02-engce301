@@ -29,7 +29,7 @@
 ## Data Flow Diagrams
 <p align="center">
     <br>
-    <img src="https://imgur.com/a/QcdRCeC.png" alt="DFD">
+    <img src="https://imgur.com/neoJ2oI.png" alt="DFD">
     <br>
 <p>
 
