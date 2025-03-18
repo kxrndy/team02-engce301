@@ -29,13 +29,12 @@
 ## Data Flow Diagrams
 <p align="center">
     <br>
-    <img src="https://imgur.com/a/QtyP4JI.png" alt="DFD">
+    <img src="https://imgur.com/a/QcdRCeC.png" alt="DFD">
     <br>
 <p>
 
 ## **Activity Flow Diagram**
 ```mermaid
-stateDiagram
     flowchart LR
     A["Start"] ---> B("PC (Agent)") & C("PC (Agent)")
     B ---> D("Agent-Notification")
