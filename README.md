@@ -23,8 +23,12 @@
   - [/getAgentStatusHistories](./parse-server/getAgentStatusHistories.md)
   - [/getAgentMessageHistories](./parse-server/getAgentMessageHistories.md)
 
-## Test Case Overview
-รอต่อไป~
+## ER Diagrams
+<p align="center">
+    <br>
+    <img src="https://imgur.com/mRzK7JN.png" alt="DFD">
+    <br>
+<p>
 
 ## Data Flow Diagrams
 <p align="center">
@@ -65,6 +69,9 @@
     <img src="https://imgur.com/YzRY2oz.png" alt="DFD">
     <br>
 <p>
+
+## Test Case Overview
+รอต่อไป~
 
 ## 👨🏻‍💻 **Members**
 
