@@ -16,7 +16,7 @@ const Agentonline = ({ OnlineAgentList, ServiceCode }) => {
     <div>
       <Container className="mt-3">
         <Row>
-          <Col md={3}>
+          <Col sm={6} xl={4} xxl={3}>
             <table className="table table-sm border shadow-sm bg-light rounded-3 overflow-hidden">
               <thead>
                 <tr>
@@ -58,7 +58,7 @@ const Agentonline = ({ OnlineAgentList, ServiceCode }) => {
               </tbody>
             </table>
           </Col>
-          <Col md={3}>
+          <Col sm={6} xl={4} xxl={3}>
             <table className="table table-sm border shadow-sm bg-light rounded-3 overflow-hidden">
               <thead>
                 <tr>
@@ -100,7 +100,7 @@ const Agentonline = ({ OnlineAgentList, ServiceCode }) => {
               </tbody>
             </table>
           </Col>
-          <Col md={3}>
+          <Col sm={6} xl={4} xxl={3}>
             <table className="table table-sm border shadow-sm bg-light rounded-3 overflow-hidden">
               <thead>
                 <tr>
@@ -142,7 +142,7 @@ const Agentonline = ({ OnlineAgentList, ServiceCode }) => {
               </tbody>
             </table>
           </Col>
-          <Col md={3}>
+          <Col sm={6} xl={4} xxl={3}>
             <table className="table table-sm border shadow-sm bg-light rounded-3 overflow-hidden">
               <thead>
                 <tr>
