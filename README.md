@@ -59,6 +59,13 @@
     n3@{ shape: text}
 ```
 
+## Work Down Structure
+<p align="center">
+    <br>
+    <img src="https://imgur.com/YzRY2oz.png" alt="DFD">
+    <br>
+<p>
+
 ## 👨🏻‍💻 **Members**
 
 | 👤 **ชื่อ - นามสกุล**            | 🎓 **รหัสนักศึกษา** |
