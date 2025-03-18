@@ -47,7 +47,7 @@ const CallStatus = ({ OnlineAgentList, CallAgentSummaries, ServiceCode, CallQueu
   }
 
   return (
-    <CallStatusContainer>
+    <CallStatusContainer className='mt-5 rounded-3 shadow-sm'>
       <div className="offerCall group">
         <div className="label">Offer Call</div>
         <div className="counter">

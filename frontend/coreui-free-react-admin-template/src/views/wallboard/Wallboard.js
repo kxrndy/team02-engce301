@@ -10,8 +10,6 @@ import ReactAudioPlayer from 'react-audio-player'
 
 import Parse from '../../parse-init.js'
 
-import Histories from './Histories.js'
-
 export default class Wallboard extends Component {
   constructor(props) {
     super(props)
@@ -360,7 +358,6 @@ export default class Wallboard extends Component {
           OnlineAgentList={this.state.OnlineAgentList}
           ServiceCode={this.state.ServiceCode}
         />
-        <Histories />
         <Container className="text-center">
           <ReactAudioPlayer
             src={this.state.beep}

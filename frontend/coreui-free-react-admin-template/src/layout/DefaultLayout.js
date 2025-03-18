@@ -5,7 +5,10 @@ const DefaultLayout = () => {
   return (
     <div>
       <AppSidebar />
-      <div className="wrapper d-flex flex-column min-vh-100">
+      <div
+        className="wrapper d-flex flex-column min-vh-100"
+        style={{ backgroundColor: '#e5e5e5' }}
+      >
         <AppHeader />
         <div className="body flex-grow-1">
           <AppContent />

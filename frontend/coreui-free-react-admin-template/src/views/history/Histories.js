@@ -153,7 +153,77 @@ export default class Histories extends Component {
     return (
       <Container className="mt-3">
         <Row className="mb-3">
-          <Col md={12} style={{ backgroundColor: '#fff', padding: '1rem' }}>
+          <Col md={12} style={{ backgroundColor: '#fff', padding: '1rem' }} className='rounded-3 border shadow-sm '>
+            <h4>Agent login </h4>
+            <CTable>
+              <CTableHead>
+                <CTableRow>
+                  <CTableHeaderCell scope="col">Date</CTableHeaderCell>
+                  <CTableHeaderCell scope="col">Agent Code</CTableHeaderCell>
+                  <CTableHeaderCell scope="col">Action</CTableHeaderCell>
+                </CTableRow>
+              </CTableHead>
+              <CTableBody>
+                {this.state.userLoginHistoriesData.map((i, key) => (
+                  <CTableRow key={key}>
+                    <CTableHeaderCell scope="row">
+                      {i.get('createdAt').toLocaleString()}
+                    </CTableHeaderCell>
+                    <CTableDataCell>
+                      [{i.get('agent_code')}] {i.get('agent_name')}
+                    </CTableDataCell>
+                    <CTableDataCell>
+                      <span
+                        className={`${i.get('is_login') === '1' ? 'bg-success' : 'bg-danger'} text-white px-2 py-1 rounded-4`}
+                      >
+                        {i.get('is_login') === '1' ? 'Login' : 'Logout'}
+                      </span>
+                    </CTableDataCell>
+                  </CTableRow>
+                ))}
+              </CTableBody>
+            </CTable>
+          </Col>
+        </Row>
+        <Row className="mb-3">
+          <Col md={12} style={{ backgroundColor: '#fff', padding: '1rem' }} className='rounded-3 border shadow-sm '>
+            <h4>Agent status </h4>
+            <CTable>
+              <CTableHead>
+                <CTableRow>
+                  <CTableHeaderCell scope="col">Date</CTableHeaderCell>
+                  <CTableHeaderCell scope="col">Agent Code</CTableHeaderCell>
+                  <CTableHeaderCell scope="col">Status from</CTableHeaderCell>
+                  <CTableHeaderCell scope="col">Status to</CTableHeaderCell>
+                </CTableRow>
+              </CTableHead>
+              <CTableBody>
+                {this.state.agentStatusHistoriesData.map((i, key) => (
+                  <CTableRow key={key}>
+                    <CTableHeaderCell scope="row">
+                      {i.get('createdAt').toLocaleString()}
+                    </CTableHeaderCell>
+                    <CTableDataCell>{`[${i.get('agent_code')}] ${i.get('agent_name')}`}</CTableDataCell>
+                    <CTableDataCell>
+                      <span
+                        className={`${this.transfromStateToTextColor(i.get('status_from'))} px-2 py-1 rounded-4 text-nowrap`}
+                      >
+                        {this.transfromStateToText(i.get('status_from'))}
+                      </span>
+                    </CTableDataCell>
+                    <CTableDataCell>
+                      <span className={`${this.transfromStateToTextColor(i.get('status_to'))} px-2 py-1 rounded-4 text-nowrap`}>
+                        {this.transfromStateToText(i.get('status_to'))}
+                      </span>
+                    </CTableDataCell>
+                  </CTableRow>
+                ))}
+              </CTableBody>
+            </CTable>
+          </Col>
+        </Row>
+        <Row className="mb-3">
+          <Col md={12} style={{ backgroundColor: '#fff', padding: '1rem' }} className='rounded-3 border shadow-sm'>
             <h4>Agent send message</h4>
             <CTable>
               <CTableHead>
@@ -173,72 +243,6 @@ export default class Histories extends Component {
                     <CTableDataCell>{i.get('from_agent_code')}</CTableDataCell>
                     <CTableDataCell>{i.get('to_agent_code')}</CTableDataCell>
                     <CTableDataCell>{i.get('message')}</CTableDataCell>
-                  </CTableRow>
-                ))}
-              </CTableBody>
-            </CTable>
-          </Col>
-        </Row>
-        <Row className="mb-3">
-          <Col md={12} style={{ backgroundColor: '#fff', padding: '1rem' }}>
-            <h4>Agent login </h4>
-            <CTable>
-              <CTableHead>
-                <CTableRow>
-                  <CTableHeaderCell scope="col">Date</CTableHeaderCell>
-                  <CTableHeaderCell scope="col">Agent Code</CTableHeaderCell>
-                  <CTableHeaderCell scope="col">Action</CTableHeaderCell>
-                </CTableRow>
-              </CTableHead>
-              <CTableBody>
-                {this.state.userLoginHistoriesData.map((i, key) => (
-                  <CTableRow key={key}>
-                    <CTableHeaderCell scope="row">
-                      {i.get('createdAt').toLocaleString()}
-                    </CTableHeaderCell>
-                    <CTableDataCell>
-                      [{i.get('agent_code')}] {i.get('agent_name')}
-                    </CTableDataCell>
-                    <CTableDataCell
-                      className={`${i.get('is_login') === '1' ? 'bg-success' : 'bg-danger'} text-white`}
-                    >
-                      {i.get('is_login') === '1' ? 'Login' : 'Logout'}
-                    </CTableDataCell>
-                  </CTableRow>
-                ))}
-              </CTableBody>
-            </CTable>
-          </Col>
-        </Row>
-        <Row>
-          <Col md={12} style={{ backgroundColor: '#fff', padding: '1rem' }}>
-            <h4>Agent status </h4>
-            <CTable>
-              <CTableHead>
-                <CTableRow>
-                  <CTableHeaderCell scope="col">Date</CTableHeaderCell>
-                  <CTableHeaderCell scope="col">Agent Code</CTableHeaderCell>
-                  <CTableHeaderCell scope="col">Status from</CTableHeaderCell>
-                  <CTableHeaderCell scope="col">Status to</CTableHeaderCell>
-                </CTableRow>
-              </CTableHead>
-              <CTableBody>
-                {this.state.agentStatusHistoriesData.map((i, key) => (
-                  <CTableRow key={key}>
-                    <CTableHeaderCell scope="row">
-                      {i.get('createdAt').toLocaleString()}
-                    </CTableHeaderCell>
-                    <CTableDataCell>{`[${i.get('agent_code')}] ${i.get('agent_name')}`}</CTableDataCell>
-                    <CTableDataCell
-                      className={`${this.transfromStateToTextColor(i.get('status_from'))}`}
-                    >
-                      <div>{this.transfromStateToText(i.get('status_from'))}</div>
-                    </CTableDataCell>
-                    <CTableDataCell
-                      className={`${this.transfromStateToTextColor(i.get('status_to'))}`}
-                    >
-                      {this.transfromStateToText(i.get('status_to'))}
-                    </CTableDataCell>
                   </CTableRow>
                 ))}
               </CTableBody>

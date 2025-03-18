@@ -6,7 +6,7 @@ import Marquee from 'react-fast-marquee'
 const CenterBar = ({ ServiceCode, WallBoardText }) => {
   const filteredItems = WallBoardText.filter((item) => item.Queue === ServiceCode)
   return (
-    <CenterBarStyle>
+    <CenterBarStyle className='rounded-3 shadow-sm border'>
       <div className="left">
         <div className="TextSlide">
           <div>
