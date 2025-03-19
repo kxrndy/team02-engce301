@@ -51,7 +51,7 @@ function upsertAgent(data) {
     {
       AgentCode: data.agent_code,
       AgentName: data.agent_name,
-      Team: "6",
+      Team: "2",
       AgentStatus: data.agent_status,
       AgentStatusCode: data.agent_status,
       IsLogin: data.is_login,
