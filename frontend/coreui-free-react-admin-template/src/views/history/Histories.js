@@ -166,7 +166,7 @@ export default class Histories extends Component {
         <Container className="mt-3">
           <CRow>
             <CCol xs={12}>
-              <CCard className="mb-4">
+              <CCard className="mb-4 shadow-sm">
                 <CCardHeader>
                   <strong>Agent login</strong>
                 </CCardHeader>
@@ -196,7 +196,7 @@ export default class Histories extends Component {
                           </CTableDataCell>
                           <CTableDataCell className="text-nowrap">
                             <span
-                              className={`${i.get('is_login') === '1' ? 'bg-success' : 'bg-danger'} text-white px-2 py-1 rounded-4`} style={{ fontSize: '8px' }}
+                              className={`${i.get('is_login') === '1' ? 'bg-success' : 'bg-danger'} text-white px-2 py-1 rounded-4`} style={{ fontSize: '12px' }}
                             >
                               {i.get('is_login') === '1' ? 'Login' : 'Logout'}
                             </span>
@@ -209,7 +209,7 @@ export default class Histories extends Component {
               </CCard>
             </CCol>
             <CCol xs={12}>
-              <CCard className="mb-4">
+              <CCard className="mb-4 shadow-sm">
                 <CCardHeader>
                   <strong>Agent status</strong>
                 </CCardHeader>
@@ -240,14 +240,14 @@ export default class Histories extends Component {
                           <CTableDataCell className="text-nowrap">{`[${i.get('agent_code')}] ${i.get('agent_name')}`}</CTableDataCell>
                           <CTableDataCell className="text-nowrap">
                             <span
-                              className={`${this.transfromStateToTextColor(i.get('status_from'))} px-2 py-1 rounded-4 text-nowrap`} style={{ fontSize: '8px' }}
+                              className={`${this.transfromStateToTextColor(i.get('status_from'))} px-2 py-1 rounded-4 text-nowrap`} style={{ fontSize: '12px' }}
                             >
                               {this.transfromStateToText(i.get('status_from'))}
                             </span>
                           </CTableDataCell>
                           <CTableDataCell className="text-nowrap">
                             <span
-                              className={`${this.transfromStateToTextColor(i.get('status_to'))} px-2 py-1 rounded-4 text-nowrap`} style={{ fontSize: '8px' }}
+                              className={`${this.transfromStateToTextColor(i.get('status_to'))} px-2 py-1 rounded-4 text-nowrap`} style={{ fontSize: '12px' }}
                             >
                               {this.transfromStateToText(i.get('status_to'))}
                             </span>
@@ -260,7 +260,7 @@ export default class Histories extends Component {
               </CCard>
             </CCol>
             <CCol xs={12}>
-              <CCard className="mb-4">
+              <CCard className="mb-4 shadow-sm">
                 <CCardHeader>
                   <strong>Agent send message</strong>
                 </CCardHeader>
