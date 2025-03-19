@@ -8,7 +8,7 @@ This function is used for testing the Parse Server functionality. It returns a s
 
 | Information      | Value                                                               |
 | ---------------- | ------------------------------------------------------------------- |
-| **Function URL** | `https://lab-parse-server.cpe-rmutl.net/team03/api/functions/hello` |
+| **Function URL** | `https://lab-parse-server.cpe-rmutl.net/team02/api/functions/hello` |
 | **Method**       | `POST`                                                              |
 | **Content-Type** | `application/json`                                                  |
 

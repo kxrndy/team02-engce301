@@ -8,7 +8,7 @@ This API endpoint allows sending a message to another agent by specifying the de
 
 | Information      | Value                                                         |
 | ---------------- | ------------------------------------------------------------- |
-| **API URL**      | `https://lab-api.cpe-rmutl.net/team06/api/v1/postSendMessage` |
+| **API URL**      | `https://lab-api.cpe-rmutl.net/team02/api/v1/postSendMessage` |
 | **Method**       | `POST`                                                        |
 | **Content-Type** | `multipart/form-data`                                         |
 

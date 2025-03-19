@@ -8,7 +8,7 @@ This function retrieves the status change history for agents.
 
 | Information      | Value                                                                                 |
 | ---------------- | ------------------------------------------------------------------------------------- |
-| **Function URL** | `https://lab-parse-server.cpe-rmutl.net/team06/api/functions/getAgentStatusHistories` |
+| **Function URL** | `https://lab-parse-server.cpe-rmutl.net/team02/api/functions/getAgentStatusHistories` |
 | **Method**       | `POST`                                                                                |
 | **Content-Type** | `application/json`                                                                    |
 

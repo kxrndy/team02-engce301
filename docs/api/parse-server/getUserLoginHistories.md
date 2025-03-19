@@ -8,7 +8,7 @@ This function retrieves the login history of users.
 
 | Information      | Value                                                                               |
 | ---------------- | ----------------------------------------------------------------------------------- |
-| **Function URL** | `https://lab-parse-server.cpe-rmutl.net/team06/api/functions/getUserLoginHistories` |
+| **Function URL** | `https://lab-parse-server.cpe-rmutl.net/team02/api/functions/getUserLoginHistories` |
 | **Method**       | `POST`                                                                              |
 | **Content-Type** | `application/json`                                                                  |
 

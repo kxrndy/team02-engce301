@@ -8,7 +8,7 @@ This function is used to update the status and information of agents within a sp
 
 | Information      | Value                                                                                   |
 | ---------------- | --------------------------------------------------------------------------------------- |
-| **Function URL** | `https://lab-parse-server.cpe-rmutl.net/team06/api/functions/postOnlineAgentListByTeam` |
+| **Function URL** | `https://lab-parse-server.cpe-rmutl.net/team02/api/functions/postOnlineAgentListByTeam` |
 | **Method**       | `POST`                                                                                  |
 | **Content-Type** | `application/json`                                                                      |
 

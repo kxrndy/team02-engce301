@@ -8,7 +8,7 @@ Log out an agent from the system.
 
 | Information      | Value                                                     |
 | ---------------- | --------------------------------------------------------- |
-| **API URL**      | `https://lab-api.cpe-rmutl.net/team06/api/v1/auth/logout` |
+| **API URL**      | `https://lab-api.cpe-rmutl.net/team02/api/v1/auth/logout` |
 | **Method**       | `GET`                                                     |
 | **Content-Type** | `-` (No content type required)                            |
 

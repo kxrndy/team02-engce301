@@ -8,7 +8,7 @@ This function retrieves the status and information of an agent based on the prov
 
 | Information      | Value                                                                                |
 | ---------------- | ------------------------------------------------------------------------------------ |
-| **Function URL** | `https://lab-parse-server.cpe-rmutl.net/team03/api/functions/OnlineAgentByAgentCode` |
+| **Function URL** | `https://lab-parse-server.cpe-rmutl.net/team02/api/functions/OnlineAgentByAgentCode` |
 | **Method**       | `POST`                                                                               |
 | **Content-Type** | `application/json`                                                                   |
 

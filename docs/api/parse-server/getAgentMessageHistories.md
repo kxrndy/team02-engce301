@@ -8,7 +8,7 @@ This function retrieves the message history between agents.
 
 | Information      | Value                                                                                  |
 | ---------------- | -------------------------------------------------------------------------------------- |
-| **Function URL** | `https://lab-parse-server.cpe-rmutl.net/team03/api/functions/getAgentMessageHistories` |
+| **Function URL** | `https://lab-parse-server.cpe-rmutl.net/team02/api/functions/getAgentMessageHistories` |
 | **Method**       | `POST`                                                                                 |
 | **Content-Type** | `application/json`                                                                     |
 

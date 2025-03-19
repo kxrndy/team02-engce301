@@ -8,7 +8,7 @@ This API endpoint updates or inserts various values of the `OnlineAgentsTable` f
 
 | Information      | Value                                                               |
 | ---------------- | ------------------------------------------------------------------- |
-| **API URL**      | `https://lab-api.cpe-rmutl.net/team06/api/v1/postOnlineAgentStatus` |
+| **API URL**      | `https://lab-api.cpe-rmutl.net/team02/api/v1/postOnlineAgentStatus` |
 | **Method**       | `POST`                                                              |
 | **Content-Type** | `multipart/form-data`                                               |
 
