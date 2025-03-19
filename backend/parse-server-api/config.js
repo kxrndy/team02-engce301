@@ -14,7 +14,7 @@ module.exports = {
   production: {
     parseConfig: {
       databaseURI:
-        "mongodb://wallboarduser:WB1qazxsw2@10.21.47.33:27017/wallboarddb-team6",
+        "mongodb://wallboarduser:WB1qazxsw2@10.21.47.33:27017/wallboarddb-team2",
       appId: "wallboardapi",
       masterKey: "wallboardapi", //Add your master key here. Keep it secret!
       clientKey: "wallboardapi",
