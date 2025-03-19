@@ -19,7 +19,7 @@
 
 ### Parse server
 
-- [/hello](./parse-server/hello.md)
+- [/hello](./docs/api/parse-server/parse-server/hello.md)
 - [/OnlineAgentByAgentCode](./docs/api/parse-server/OnlineAgentByAgentCode.md)
 - [/postOnlineAgentListByTeam](./docs/api/parse-server/postOnlineAgentListByTeam.md)
 - [/getUserLoginHistories](./docs/api/parse-server/getUserLoginHistories.md)
