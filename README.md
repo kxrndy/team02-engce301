@@ -1,5 +1,18 @@
 # 🚀 **team02-engce301**
 
+## 📋 **Table of Contents**
+
+- [Project Overview](#-project-overview)
+- [Features](#-features)
+  - [Agent Notification System](#1-agent-notification-system-)
+  - [Agent Wallboard System](#2-agent-wallboard-system-)
+- [Screenshots](#-screenshots)
+- [API Specification](#-api-specification)
+- [System Architecture](#-system-architecture)
+- [Test Case Overview](#-test-case-overview)
+- [Members](#-members)
+- [Project Link](#-project-link) or [Click Me!](https://lab-wb.cpe-rmutl.net/team02/#/wallboard)
+
 ## 📝 **Project Overview**
 
 โครงงานรายวิชา **ENGCE301**
@@ -7,6 +20,49 @@
 ภาควิชาวิศวกรรมคอมพิวเตอร์ คณะวิศวกรรมศาสตร์
 มหาวิทยาลัยเทคโนโลยีราชมงคลล้านนา เชียงใหม่
 ภาคการศึกษาที่ 2 ปีการศึกษา 2567
+
+## 🎯 **Features**
+
+### 1. Agent Notification System 🔔
+
+| Feature ID | Description                                                                     |
+| ---------- | ------------------------------------------------------------------------------- |
+| **R1.1**   | Agent สามารถ Login โดยใช้ Password ได้ โดยถ้า Password ผิดจะไม่สามารถ login ได้ |
+| **R1.2**   | สามารถเก็บประวัติการ login และ logout ได้ ในรูปแบบของวันเวลาที่ Login/Logout    |
+| **R1.3**   | สามารถเก็บประวัติการเปลี่ยนสถานะเวลาเริ่มต้นและสิ้นสุดแต่ละสถานะได้             |
+| **R1.4**   | สามารถเก็บประวัติการพูดคุยของแต่ละ Agent ได้                                    |
+
+### 2. Agent Wallboard System 🖥️
+
+| Feature ID | Description                                                            |
+| ---------- | ---------------------------------------------------------------------- |
+| **R2.1**   | สามารถแสดง Banner ที่ wallboard รวมทุก Agent ได้                       |
+| **R2.2**   | สามารถแสดงประวัติการ login logout และการเปลี่ยนสถานะของแต่ละ Agent ได้ |
+| **R2.3**   | สามารถแสดงประวัติการพูดคุยของแต่ละ Agent ได้                           |
+
+## 📸 **Screenshots**
+
+### System Overview
+
+![overview.png](./docs/image/overview.png)
+
+### Feature Demonstrations
+
+- R1.1 - Agent Login
+
+![agend_notification.png](./docs/image/agend_notification.png)
+
+- R1.2, R2.2 - Login & Logout History
+
+![agent_login.png](./docs/image/agent_login.png)
+
+- R1.3, R2.2 - Status Change History
+
+![agent_status.png](./docs/image/agent_status.png)
+
+- R1.4, R2.3 - Agent Message History
+
+![agent_send_message.png](./docs/image/agent_send_message.png)
 
 ## 🔗 **API Specification**
 
@@ -26,7 +82,7 @@
 - [/getAgentStatusHistories](./docs/api/parse-server/getAgentStatusHistories.md)
 - [/getAgentMessageHistories](./docs/api/parse-server/getAgentMessageHistories.md)
 
-## 📊 Diagrams
+## 📊 **System Architecture**
 
 ### ER Diagram
 
@@ -40,7 +96,7 @@
   <img src="https://imgur.com/neoJ2oI.png" alt="DFD">
 <p>
 
-###$ **Activity Flow Diagram**
+### **Activity Flow Diagram**
 
 ```mermaid
     flowchart LR
@@ -107,3 +163,6 @@
 | **System Analyst (SA)** 🧠 | **นายณัฐภัทร สุระธง**            | `65543206012-8`     |
 | **Developer** ⚙️           | **นายกฤษฎา วิริยา**              | `65543206041-7`     |
 | **Tester** 📄              | **นายสุขสันต์ คำยา**             | `65543206084-7`     |
+
+## 🌐 **Project Link**
+ระบบ Wallboard สามารถเข้าชมได้ที่: [https://lab-wb.cpe-rmutl.net/team02/#/wallboard](https://lab-wb.cpe-rmutl.net/team02/#/wallboard)
