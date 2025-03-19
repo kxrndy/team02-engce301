@@ -54,11 +54,11 @@ const CallStatus = ({ OnlineAgentList, CallAgentSummaries, ServiceCode, CallQueu
   }
 
   return (
-    <CRow className="mt-5 rounded-3 shadow-sm text-white" xs={{ gutter: 4 }}>
-      <CCol sm={6} xl={4} xxl={3} className="offerCall group">
+    <CRow className="mt-5 text-white" xs={{ gutter: 4 }}>
+      <CCol sm={6} xl={4} xxl={3}>
         <CWidgetStatsA
           color="success"
-          className="py-3 position-relative overflow-hidden"
+          className="py-3 position-relative overflow-hidden shadow-sm"
           value={
             <>
               <div className="label">Offer Call</div>
@@ -72,10 +72,10 @@ const CallStatus = ({ OnlineAgentList, CallAgentSummaries, ServiceCode, CallQueu
           }
         />
       </CCol>
-      <CCol sm={6} xl={4} xxl={3} className="">
+      <CCol sm={6} xl={4} xxl={3}>
         <CWidgetStatsA
           color="danger"
-          className="py-3 position-relative overflow-hidden"
+          className="py-3 position-relative overflow-hidden shadow-sm"
           value={
             <>
               <div className="label">Abandon Call</div>
@@ -89,10 +89,10 @@ const CallStatus = ({ OnlineAgentList, CallAgentSummaries, ServiceCode, CallQueu
           }
         />
       </CCol>
-      <CCol sm={6} xl={4} xxl={3} className="logged_agent group">
+      <CCol sm={6} xl={4} xxl={3}>
         <CWidgetStatsA
           color="info"
-          className="py-3 "
+          className="py-3 position-relative overflow-hidden shadow-sm"
           value={
             <>
               <div className="z-2">Agents</div>
@@ -110,7 +110,7 @@ const CallStatus = ({ OnlineAgentList, CallAgentSummaries, ServiceCode, CallQueu
       <CCol sm={6} xl={4} xxl={3} className="total_call_queue group" xs={{ gutter: 4 }}>
         <CWidgetStatsA
           color="light"
-          className="py-3"
+          className="py-3 position-relative overflow-hidden shadow-sm"
           value={
             <>
               <div className="label text-dark"> Total Queue</div>
