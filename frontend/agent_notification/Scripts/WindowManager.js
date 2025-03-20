@@ -4,7 +4,7 @@ const path = require('path');
 let imgPath;
 const AppNameVersion = app.getName() + " " + app.getVersion();
 const win_width = 320;
-const win_height = 210;
+const win_height = 400;
 
 
 class WindowManager {
@@ -19,7 +19,7 @@ class WindowManager {
     }
 
     createIPC() {
-        
+
         ipcMain.on('close-me', (evt, arg) => {
             app.quit()
         })
@@ -32,7 +32,7 @@ class WindowManager {
             this.showWindow()
         })
 
- 
+
 
         //--------------------------------
     }
@@ -80,7 +80,7 @@ class WindowManager {
                 nodeIntegration: true,
                 enableRemoteModule: true,
                 plugins: true,
-                devTools: true,
+                devTools: false,
                 contextIsolation: false,  // Be careful with this in production
                 webSecurity: true
             },
@@ -125,7 +125,7 @@ class WindowManager {
 
     closeApp() {
         if (app.showExitPrompt) {
-            e.preventDefault() // Prevents the window from closing 
+            e.preventDefault() // Prevents the window from closing
             dialog.showMessageBox({
                 type: 'question',
                 buttons: ['Yes', 'No'],
