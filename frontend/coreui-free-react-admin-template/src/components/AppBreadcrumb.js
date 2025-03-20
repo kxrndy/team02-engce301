@@ -33,7 +33,7 @@ const AppBreadcrumb = () => {
 
   return (
     <CBreadcrumb className="my-0">
-      <CBreadcrumbItem href="/" style={{ color: '#999' }}>
+      <CBreadcrumbItem href="/team02/" style={{ color: '#999' }}>
         Home
       </CBreadcrumbItem>
       {breadcrumbs.map((breadcrumb, index) => {
