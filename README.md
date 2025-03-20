@@ -46,21 +46,25 @@
 
 ![overview.png](./docs/image/overview.png)
 
+
 ### Feature Demonstrations
 
-- R1.1 - Agent Login
+- `R1.1` - Agent Login
 
-![agend_notification.png](./docs/image/agend_notification.png)
+<p align="center">
+  <img style="width: 49%;" src="./docs/image/agend_notification.png" alt="agend_notification">
+  <img style="width: 49%;" src="./docs/image/agend_notification-2.png" alt="agend_notification-2">
+</p>
 
-- R1.2, R2.2 - Login & Logout History
+- `R1.2` and `R2.2`- Login & Logout History
 
 ![agent_login.png](./docs/image/agent_login.png)
 
-- R1.3, R2.2 - Status Change History
+- `R1.3` and `R2.2` - Status Change History
 
 ![agent_status.png](./docs/image/agent_status.png)
 
-- R1.4, R2.3 - Agent Message History
+- `R1.4` and `R2.3` - Agent Message History
 
 ![agent_send_message.png](./docs/image/agent_send_message.png)
 
