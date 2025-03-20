@@ -703,14 +703,14 @@
         <div class="col-12">
           <table class="table table-sm fs-6">
             <tr>
-              <div class="pt-2 pl-2 pr-2">
+              <div class="pt-2">
                 <tr>
-                  <td class="text-white">
-                    <span class="text-white" id="connectTime">Information</span>
+                  <td>
+                    <span id="connectTime">Information</span>
                   </td>
                 </tr>
                 <tr>
-                  <td class="text-white">
+                  <td>
                     <span
                       class="text-blue badge bg-danger"
                       id="ConnectionStatus"
@@ -732,7 +732,7 @@
                 <div class="col-sm-12 text-center">
                   <button
                     id="buttonCall"
-                    class="btn btn-primary btn-sm shadow btn-block mt-2"
+                    class="btn btn-primary btn-sm btn-block shadow w-100 border-1 border-dark"
                     disable
                     onclick="CallOnescreen(1,'0000')"
                   >
@@ -741,7 +741,7 @@
 
                   <button
                     id="NotifyBtn"
-                    class="btn btn-warning btn-sm btn-block mt-2"
+                    class="btn btn-warning btn-sm btn-block mt-2 w-100 border-1 border-dark"
                     onclick="notify()"
                   >
                     Notification
@@ -749,52 +749,68 @@
 
                   <button
                     id="buttonDisConnect"
-                    class="btn btn-danger btn-sm shadow btn-block mt-2"
+                    class="btn btn-danger btn-sm shadow btn-block mt-2 w-100 border-1 border-dark"
                     onclick="logoutFromAPI()"
                   >
                     Disconnect
                   </button>
 
                   <div class="input-group mt-2">
-                    <img
-                      id="help-and-support"
-                      src="./assets/icon/Help_And_Support.png"
-                      width="30px"
-                      height="30px"
-                    />
-                    <select
-                      id="currentStatus"
-                      onchange="changeAgentStatus(this)"
-                    >
-                      <option value="1">Avalible</option>
-                      <option value="2">Active</option>
-                      <option value="3">Wrap</option>
-                      <option value="4">Not Ready</option>
-                    </select>
+                    <div class="col-xs-1 mb-1">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text border-1 border-dark">
+                            <img
+                              id="help-and-support"
+                              src="./assets/icon/Help_And_Support.png"
+                              width="20px"
+                              height="20px"
+                            />
+                          </div>
+                        </div>
+                        <select
+                          id="currentStatus"
+                          class="rounded form-control form-control-sm border-1 border-dark"
+                          onchange="changeAgentStatus(this)"
+                        >
+                          <option value="1">Avalible</option>
+                          <option value="2">Active</option>
+                          <option value="3">Wrap</option>
+                          <option value="4">Not Ready</option>
+                        </select>
+
+                      </div>
+                    </div>
                   </div>
-                  <div class="input-group mt-2">
-                    <div class="col-xs-1">
-                      <input
-                        type="text"
-                        class="form-control form-control-sm"
-                        id="destAgent"
-                        placeholder="Agent"
-                      />
+
+                  <div class="mt-2">
+                    <div class="col-xs-1 mb-1">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text border-1 border-dark">To</div>
+                        </div>
+                        <input
+                          type="text"
+                          class="rounded form-control form-control-sm border-1 border-dark"
+                          id="destAgent"
+                          placeholder="Agent"
+                        />
+                      </div>
                     </div>
 
-                    <div class="col-xs-3">
+                    <div class="col-xs-3 mb-1">
                       <input
                         type="text"
-                        class="form-control form-control-sm"
+                        class="form-control form-control-sm border-1 border-dark"
                         id="agentMsg"
                         placeholder="Type message here.."
                       />
                     </div>
 
-                    <div class="input-group-append">
+                    <div class="input-group-append text-end">
                       <button
                         id="SendMsgBtn"
-                        class="btn btn-warning btn-sm btn-block shadow"
+                        class="btn btn-warning btn-sm btn-block shadow border-1 border-dark"
                         onclick="sendMessage()"
                       >
                         Send
@@ -808,36 +824,35 @@
         </div>
 
         <div id="display">
-          <div class="row">
-            <div class="col-12">
-              <form onsubmit="return doLogin(event)">
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Username</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="agent001"
-                    name="username"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
-                  <input
-                    type="password"
-                    class="form-control"
-                    placeholder="Password"
-                    name="password"
-                  />
-                </div>
-                <button
-                  id="buttonConnect"
-                  class="btn btn-warning btn-sm btn-block shadow mt-3"
-                  style="width: 100%"
-                >
-                  Login
-                </button>
-              </form>
-            </div>
+          <div class="w-100">
+            <form onsubmit="return doLogin(event)">
+              <div class="mb-2">
+                <label for="username" class="form-label">Username</label>
+                <input
+                  type="text"
+                  class="form-control border-1 border-dark"
+                  placeholder="agent001"
+                  name="username"
+                  required
+                />
+              </div>
+              <div>
+                <label for="password" class="form-label">Password</label>
+                <input
+                  type="password"
+                  class="form-control border border-1 border-dark"
+                  placeholder="Password"
+                  name="password"
+                  required
+                />
+              </div>
+              <button
+                id="buttonConnect"
+                class="btn btn-sm btn-warning w-100 shadow-sm mt-2 border border-1 border-dark"
+              >
+                Login
+              </button>
+            </form>
           </div>
         </div>
 

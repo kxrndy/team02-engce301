@@ -1,20 +1,18 @@
 body {
     background-color: transparent !important;
-    border: 1px solid #48545c;
-    overflow-y: hidden;
+    overflow-y: scroll;
 }
 
 .warper {
     /* border-radius: 5px; */
-    background-color: rgba(0, 0, 0, 0.5);
-    color: seashell;
+    background-color: #e5e5e5;
+    color: #000;
     min-height: 100vh;
     padding: 0 15px 15px 15px;
 }
 
 .table td {
     font-size: 11px !important;
-    color: snow !important
 }
 
 .version {
